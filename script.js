@@ -2,7 +2,7 @@ let barChartInstance = null;
 let scatterChartInstance = null;
 let pieChartInstance = null;
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://student-performance-tracker-8m50.onrender.com';
 
 async function fetch_render() {
     const response = await fetch(`${BASE_URL}/students`);
