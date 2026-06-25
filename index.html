@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Student Performance Tracker</title>
+    <script>
+        const saved = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', saved);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="Title">Student Performance Tracker</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="themeIcon">🌙</span>
+        <span id="themeLabel">Dark Mode</span>
+    </button>
+    <div class="student-count">
+        <h2>Total Students: <span id="studentCount">0</span></h2>
+    </div>
+    <div class="charts-row">
+        <canvas id="barChart"> </canvas>
+        <canvas id="scatterChart"> </canvas>
+        <canvas id="pieChart"> </canvas>
+    </div>
+
+    <div class="add-student">
+        <h2 id="add_std">Add New Student</h2>
+
+        <input type="text" id="name" placeholder="Student Name" />
+        <input type="number" id="age" placeholder="Age" />
+        <input type="number" id="study_hours" placeholder="Study Hours" />
+        <input type="number" id="score" placeholder="Score" />
+
+        <button id="btn-add" onclick="addStudent()">Add Student</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
