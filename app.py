@@ -5,6 +5,13 @@ import sqlite3
 #used for communication with frontend
 app=Flask(__name__)
 CORS(app)
+@app.route('/')
+def index():
+    return send_from_directory('../frontend', 'index.html')
+
+@app.route('/<path:filename>')
+def static_files(filename):
+    return send_from_directory('../frontend', filename)
 
 #initialize database in start if it had nothing
 def init_db():
@@ -77,9 +84,8 @@ def add_student():
 
     return jsonify({'message' : 'Student added successfully'}),201
 
-
+init_db()
 if __name__ =='__main__' :
-    init_db()
     app.run(debug=True,port=5000)
 
 
