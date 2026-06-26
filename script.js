@@ -41,6 +41,8 @@ function renderCharts(students) {
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 title: { display: true, text: 'Student vs Score', color: theme.textColor, font: { size: 14, weight: '600' } },
                 legend: { labels: { color: theme.textColor } }
@@ -62,6 +64,8 @@ function renderCharts(students) {
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 title: { display: true, text: 'Study Hours vs Score', color: theme.textColor, font: { size: 14, weight: '600' } },
                 legend: { labels: { color: theme.textColor } }
@@ -105,6 +109,8 @@ function renderCharts(students) {
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 title: { display: true, text: 'Score Distribution by Group', color: theme.textColor, font: { size: 14, weight: '600' } },
                 legend: { position: 'bottom', labels: { color: theme.textColor, padding: 15 } }
