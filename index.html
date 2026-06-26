@@ -17,14 +17,25 @@
         <span id="themeIcon">🌙</span>
         <span id="themeLabel">Dark Mode</span>
     </button>
+
+
     <div class="student-count">
         <h2>Total Students: <span id="studentCount">0</span></h2>
     </div>
+
+
     <div class="charts-row">
-        <canvas id="barChart"> </canvas>
-        <canvas id="scatterChart"> </canvas>
-        <canvas id="pieChart"> </canvas>
+        <div class="chart-wrapper">
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="scatterChart"></canvas>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="pieChart"></canvas>
+        </div>
     </div>
+
 
     <div class="add-student">
         <h2 id="add_std">Add New Student</h2>

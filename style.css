@@ -143,6 +143,19 @@ canvas {
 
 }
 
+.chart-wrapper {
+    flex: 1 1 280px;
+    max-width: 320px;
+    height: 280px;
+    position: relative;
+}
+
+.chart-wrapper canvas {
+
+    max-width: unset;
+    max-height: unset;
+}
+
 .add-student {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -214,27 +227,10 @@ canvas {
 
 
 @media (max-width: 900px) {
-    .charts-row canvas {
-        flex: 1 1 280px;
-        max-width: calc(50% - 1rem);
-        height: 250px !important;
-    }
-
-    .charts-row {
-        max-width: 700px;
-    }
-
-    .add-student {
-        max-width: 700px;
-    }
-}
-
-
-@media (max-width: 900px) {
-    .charts-row canvas {
+    .chart-wrapper {
         flex: 1 1 calc(50% - 1rem);
         max-width: calc(50% - 1rem);
-        height: 220px !important;
+        height: 240px;
     }
 }
 
@@ -246,11 +242,11 @@ canvas {
         gap: 1rem;
     }
 
-    .charts-row canvas {
-        width: 100% !important;
-        max-width: 100% !important;
+    .chart-wrapper {
+        width: 100%;
+        max-width: 100%;
         flex: none;
-        height: 220px !important;
+        height: 220px;
     }
 
     .add-student input {
